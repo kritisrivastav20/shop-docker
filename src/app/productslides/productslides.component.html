@@ -1,0 +1,40 @@
+
+<ion-content style="background: transparent" id = "productspage">
+  <ion-slides class="image-slider" loop="true" slidesPerView="5">
+    <ion-slide *ngFor="let image of images" attr.data-index={{i}}  style="width: 100%">
+      <ion-row style="padding-left: 8px; padding-right: 8px" id = "grid">
+        <ion-col size = "5" style="margin-top: 8px">
+          <img src={{image.postImg}} id = "product" class="thumb-img"/>
+        </ion-col>
+        <ion-col align = "start" style="margin-top: 8px">
+          <a >   
+              {{ image.name }} <br>
+              $ 50
+          </a>
+          <ion-button
+          class="break"
+          expand="block" fill="clear" id = "buttons" color = "secondary" style="margin-top: 5px;"
+          >
+         Favorite
+          </ion-button>
+          <ion-button
+          class="break"
+          expand="block" fill="clear" id = "buttons" color = "secondary"
+          >
+          Add to Collection
+          </ion-button>
+        </ion-col>
+            <!-- <ion-icon id = "close" src="assets/icon/close.svg" (click)="dismiss()"></ion-icon> -->
+        <ion-col size = "12">
+            <ion-button
+            class="break"
+            (click) = "bagit(image)"
+            expand="block" fill="solid" color = "success" style="font-size: 18px; text-transform: none;"
+            >
+            Add to Bag
+            </ion-button>
+        </ion-col>
+    </ion-row>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

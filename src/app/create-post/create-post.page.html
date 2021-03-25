@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="1" class="modal-back-button-col">
+        <ion-icon class="modal-back-button" src="assets/icon/back.svg" (click)=closeModal()></ion-icon>
+      </ion-col>
+      <ion-col size="10">
+        <ion-title>Create Post</ion-title>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed style="height: 100%;" class="ion-no-padding">
+    <ion-row style="height: 100%;">
+      <ion-col size="12" style="height: 50%; padding: 10px;" *ngIf="!isPostImageUploaded">
+        <div class="upload-div" (click)="selectImage()">
+          <ion-row style="height: 100%;">
+            <ion-col size="12" style="height: 55%;" class="upload-image-col">
+              <ion-icon src="assets/icon/upload-image.svg" class="upload-icon"></ion-icon>
+            </ion-col>
+            <ion-col size="12" style="height: 45%;" class="upload-label-col">
+              <ion-label class="upload-label">Upload Image</ion-label>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+
+      <ion-col size="12" style="height: 50%;" *ngIf="isPostImageUploaded" class="no-padding-left-right-top">
+        <img *ngIf="isPostImageUploaded" src="{{'data:image/png;base64,' + postImageBase64Value}}" class="post-img" />
+        <ion-icon *ngIf="isPostImageUploaded" name="trash" class="trash-icon"
+          (click)="isPostImageUploaded=false; postImageBase64Value=''"></ion-icon>
+      </ion-col>
+
+      <ion-col size="12" style="min-height: 50%; padding: 10px;">
+        <ion-row>
+          <ion-col size="12">
+            <ion-label class="field-header-label">Write a caption</ion-label>
+            <ion-textarea class="caption-textarea" placeholder="write description..." rows="5"
+              [(ngModel)]="captionInputValue"></ion-textarea>
+          </ion-col>
+
+          <ion-col size="12" class="hashtag-col">
+            <ion-label class="field-header-label">Add Hashtags</ion-label>
+            <div>
+              <ion-chip *ngFor="let tag of hashTags; let i = index;">
+                <ion-label> {{ tag }} </ion-label>
+                <ion-icon name="close-circle" (click)="deleteHashTag(i)"></ion-icon>
+              </ion-chip>
+            </div>
+            <ion-input class="hashtag-input" placeholder="type here..." (ionInput)="hashtagCheck($event)"
+              [(ngModel)]="hashInputValue">
+            </ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="goToPublishPage()">
+    <ion-fab-button>
+      <ion-icon name="chevron-forward"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

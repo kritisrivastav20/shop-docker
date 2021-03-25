@@ -1,0 +1,152 @@
+.app-label {
+    font-size: 200%;
+    padding-left: 15px;
+}
+
+.notification-icon-col {
+    align-self: center;
+    text-align: center;
+    font-size: 150%;
+    padding-top: 5px;
+}
+
+.follow-button {
+    font-size: 12px;
+    border-radius: 12px !important;
+}
+
+.post-img {
+    height: 419px !important;
+    width: 100% !important;
+    object-fit: cover;
+}
+
+.over-image-options-div {
+    background: #D9DAD9;
+    display: flex;
+    top: 5%;
+    position: absolute;
+    right: 5%;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 120%;
+}
+.over-image-options-product {
+    background: #FFFFFF;
+    display: flex;
+    bottom: 5%;
+    position: absolute;
+    left: 5%;
+    padding: 8px;
+    border-radius: 20px !important;
+    font-size: 15px;
+    color: #343333;
+    border-bottom: 1px solid #343333;
+    border-left: 1px solid #343333;
+    border-right: 1px solid #343333;
+    border-top: 1px solid #343333;
+}
+
+.post-footer-option-icon {
+    width: 28px;
+    height: 25px;
+    padding-right: 16px;
+}
+
+.post-footer-option-label {
+    vertical-align: super;
+    font-size: 16px;
+    color: #343333;
+}
+
+.post-desc {
+    font-size: 17px;
+    color: #343333;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.tag-label {
+    font-size: 17px;
+    padding-right: 5px;
+}
+
+.tag-hash {
+    font-size: 17px;
+    padding-right: 2px;
+    padding-top: 4px;
+}
+
+.time-label {
+    font-size: small;
+    color: #A3ADAF;
+    padding-right: 10px;
+}
+
+.likes-label {
+    font-size: small;
+    color: #A3ADAF;
+}
+
+.view-more-label {
+    font-size: small;
+    padding-right: 1px;
+}
+
+.profile-avatar {
+    height: 50px;
+    width: 50px;
+}
+
+#icon{
+    width: 26px;
+    height: 26px;
+}
+
+#icon {
+    width: 33px;
+    height: 33px;
+
+}
+
+#button {
+    border-radius: 50%;
+    border: 1px;
+}
+
+#following {
+    border-bottom: 1px solid #343333;
+    border-left: 1px solid #343333;
+    border-right: 1px solid #343333;
+    border-top: 1px solid #343333;
+    text-align: center;
+    margin-right: 8px;
+}
+
+#actions {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 45px;
+}
+
+#view {
+    padding-top: 3px;
+    width: 107px;
+    height: 23px
+}
+#popup{
+    height: 280px; width: 100%; z-index: 10;
+    display: flex;
+    bottom: 0%;
+    position: absolute;
+}
+#popbutton{
+    text-align: center;
+    margin-right: 8px;
+    display: flex;
+    top: 51%;
+    right: 5%;
+    position: absolute;
+    background: #D9DAD9;
+    border-radius: 50%;
+}

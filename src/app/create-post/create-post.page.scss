@@ -1,0 +1,64 @@
+.upload-div {
+    height: 100%;
+    background-color: #fdf6ff;
+    border: dashed;
+    border-width: 1.5px;
+    border-radius: 5px;
+    border-color: #a2a2a2;
+}
+
+.upload-image-col {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.upload-icon {
+    font-size: 600%;
+    color: #a2a2a2;
+}
+
+.upload-label {
+    font-size: 150%;
+    color:#a2a2a2;
+}
+
+.upload-label-col {
+    text-align: center;
+}
+
+.caption-textarea {
+    border: solid;
+    border-radius: 5px;
+    border-width: 1.5px;
+    border-color: #a2a2a2;
+    --placeholder-font-style: italic;
+}
+
+.hashtag-input {
+    border: solid;
+    border-radius: 5px;
+    border-width: 1.5px;
+    border-color: #a2a2a2;
+    margin-top: 8px;
+    --placeholder-font-style: italic;
+}
+
+.post-img {
+    height: 100%;
+    width: 100%;
+}
+
+.trash-icon {
+    position: absolute;
+    font-size: larger;
+    right: 3%;
+    bottom: 2%;
+    background: #a2a2a2;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.hashtag-col {
+    padding-top: 10px;
+}

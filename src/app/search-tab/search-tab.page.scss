@@ -1,0 +1,67 @@
+.button{
+    border-radius: 50%;
+    border: 1px;
+}
+.icon{
+    width: 26px;
+    height: 26px;
+}
+.rounded {
+    border-radius: 10px !important;
+    margin-top: 16px; 
+    color: #343333; 
+    font-size: 16px;
+    margin-left: 16px;
+    width: 93%;
+    background: #F1F1F1;
+ }
+ .searchbutton{
+    border-bottom: 1px solid #343333;
+       border-left: 1px solid #343333;
+       border-right: 1px solid #343333;
+       border-top: 1px solid #343333;
+       border-radius: 10px !important;
+       text-align: center;
+       margin-right: 8px;
+}
+
+ion-col {
+    padding: 4px;
+}
+.profile-avatar {
+    height: 50px;
+    width: 50px;
+}
+.follow-button {
+    font-size: 12px;
+}
+.following{
+    border-bottom: 1px solid #343333;
+       border-left: 1px solid #343333;
+       border-right: 1px solid #343333;
+       border-top: 1px solid #343333;
+       text-align: center;
+       border-radius: 10px !important;
+       margin-right: 8px;
+       color: #343333;
+}
+.product{
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+.productcol{
+    width: 50%;
+}
+.container{
+    margin-top: 8px;
+    column-count: 2;
+    padding: 0px;
+    margin: 0px;
+    column-gap: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.productcol1{
+width: 100%;
+}

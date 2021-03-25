@@ -1,0 +1,75 @@
+<ion-content *ngIf = "param === 'false'" [fullscreen]="true">
+  <ion-grid fixed style="height: 100%;" class="ion-no-padding">
+    <ion-row style="height: 100%;">
+      <ion-col size="12" style="height: 100%" *ngIf="!isPostImageUploaded">
+        <div class="upload-div" (click)="selectImage()">
+          <ion-row style="height: 100%;">
+            <ion-col size="12" style="height: 55%;" class="upload-image-col">
+              <ion-icon src="assets/icon/upload-image.svg" class="upload-icon"></ion-icon>
+            </ion-col>
+            <ion-col size="12" style="height: 45%;" class="upload-label-col">
+              <ion-label class="upload-label">Upload Image</ion-label>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-content *ngIf = "param === 'true'">
+  <section class="layout-row align-items-center justify-content-center px-16">
+    <img src="assets/icon/cart.svg" style="height: 40px" alt="" />
+  </section>
+  <div class="divider"></div>
+  <div *ngFor="let cartItem of cart?.items; let idx = index" >
+  <ion-row id = "grid">
+    <ion-col size = "5" style="margin-top: 8px">
+      <img class = "cart" src={{cartItem.image}} id = "product"/>
+    </ion-col>
+    <ion-col align = "start" style="margin-top: 8px">
+      <a class = "prod-name">   
+          {{ cartItem.item }} </a> 
+          <br>
+          <a class = "prod-details">
+          Product type: Utility | $ 50
+      </a>
+      <ion-button
+      class="break"
+      expand="block" fill="clear" class = "buttons" color = "secondary" style="margin-top: 16px;"
+      (click) = "handleQuantity('minus', idx)"
+      >
+     -
+      </ion-button>
+      <a class = "prod-name quantity"> {{cartItem.quantity}}</a>
+      <ion-button
+      class="break"
+      expand="block" fill="clear" class = "buttons plus" color = "secondary"
+      (click) = "handleQuantity('plus', idx)"
+      >
+      +
+      </ion-button>
+    </ion-col>
+        <!-- <ion-icon id = "close" src="assets/icon/close.svg" (click)="dismiss()"></ion-icon> -->
+</ion-row>
+</div>
+<ion-row id = "grid">
+  <ion-col size = "5" style="margin-top: 8px">
+    <a class = "prod-name" >Subtotal</a>
+  </ion-col>
+  <ion-col align = "center" style="margin-top: 8px">
+    <a class = "prod-name" style="font-size: 24px;">   
+        $ {{50*cart.items.length}} </a> 
+        <br>
+        <a class = "prod-details">
+       (Total does not include shipping)
+    </a>
+  </ion-col>
+</ion-row>
+<ion-button
+class="break"
+expand="block" fill="solid"  class = "checkout" color = "secondary"
+>
+Check out
+</ion-button>
+</ion-content>

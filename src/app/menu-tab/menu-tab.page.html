@@ -1,0 +1,86 @@
+<ion-header color = "light"  class="ion-no-border"  lines = "none">
+  <ion-toolbar color = "light">
+    <ion-row style="width: 100%" color = "light" >
+      <ion-col align = "start" style="padding-top: 16px; padding-left: 32px">
+        <img src="assets/icon/Profile.svg" style="height: 40px" alt="" />      
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col align = "center">
+        <div style="margin-top: 8px">
+            <img class="displaypic" src = "/assets/images/post.svg" />
+            <ion-icon
+            class="camera"
+            name = "camera"
+            color = "primary"
+          > </ion-icon>
+          </div>
+    </ion-col>
+  </ion-row>
+  <ion-row style="padding-top: 16px; border-bottom:1px solid #e9e7e7;margin-bottom: 16px;">
+    <ion-col align = "center">
+<strong style="font-size: 17px; color: #343333">200</strong><br>
+<a style="font-size: 16px; color: #848484">Following</a>
+    </ion-col>
+    <ion-col align = "center">
+        <strong style="font-size: 17px; color: #343333">25.6K</strong><br>
+        <a style="font-size: 16px; color: #848484">Followers</a>
+    </ion-col>
+    <ion-col align = "center">
+        <strong style="font-size: 17px; color: #343333">1041</strong><br>
+        <a style="font-size: 16px; color: #848484">Posts</a>
+    </ion-col>
+  </ion-row>
+  <!-- <ion-row style="padding-top: 8px; padding-bottom: 8px;">
+    <ion-col align = "start" style="padding-left: 16px">
+        <a style="font-size: 14px; color: #343333">Pictures from home and lifestyle
+        <br>Shop now!!</a>
+    </ion-col>
+  </ion-row> -->
+  <ion-segment [(ngModel)]="selector" style="background: #FFFFFF" id = "segment">
+      <ion-segment-button value="Current" fill = "clear" checked>
+        <ion-label  id = "button" >Posts</ion-label>
+      </ion-segment-button >
+    <ion-segment-button value="Collection" fill = "clear" >
+      <ion-label id = "button">Collection</ion-label>
+    </ion-segment-button >
+  </ion-segment>
+
+  <div [ngSwitch]="selector" color = "medium">
+      <ion-list *ngSwitchCase="'Current'"id = "list" >
+        
+         <div class = "container" >
+            <div class = "productcol" *ngFor="let image of images; let i = index" >
+              <img src={{image.product}} class = "product"/>
+            </div>
+            </div>
+         
+      </ion-list>
+  
+       <div *ngSwitchCase="'Collection'" id = "list">
+         
+        <ion-slides class="image-slider" loop="true" [options]="sliderConfig">
+          <ion-slide *ngFor="let item of products" >
+            <ion-col>
+              <ion-col  style="margin-top: 8px">
+                <img src="{{item.product}}" style="object-fit: cover" class = "product"/>
+              </ion-col>
+              <ion-col  style="margin-top: 8px; align-content: flex-start;">
+             <a style="font-size: 16px; color: #343333">{{item.tag}}</a> <br>
+             <a style="font-size: 14px; color: #848484">{{item.posts}}</a>
+                </ion-col>
+                <ion-icon *ngIf = "item.isFollow" (click)="item.isFollow =!item.isFollow" name = "heart" color = "danger" class="over-image-options-div"
+                ></ion-icon>
+                <ion-icon *ngIf = "!item.isFollow" (click)="item.isFollow =!item.isFollow" name = "heart-outline" color = "danger" class="over-image-options-div"
+                ></ion-icon>  
+          </ion-col>
+          </ion-slide>
+        </ion-slides>
+          
+      </div>
+    </div>
+</ion-content>

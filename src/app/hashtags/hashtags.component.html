@@ -1,0 +1,22 @@
+ 
+ <ion-header color = "light" id = "header">
+    <ion-toolbar color = "light">
+      <ion-row style="padding-top: 16px; width: 100%; padding-bottom: 8px;" color = "light" >
+        <ion-col size="2.5" align = "start">
+          <ion-button (click) = "sendOutput()" fill="clear" shape="round" align = "start" >
+            <ion-icon name = "arrow-back" slot="icon-only" color = "primary" id = "icon"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col align = "start" style="padding-top: 16px">
+         <a style="font-size: 22px; color: #343333"><strong>#Collection</strong></a>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-header>
+ <ion-content>
+   <div class = "container" >
+    <div class = "productcol" *ngFor="let image of images; let i = index" >
+      <img src={{image.product}} class = "product"/>
+    </div>
+    </div>
+ </ion-content>

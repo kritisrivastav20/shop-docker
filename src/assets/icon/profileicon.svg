@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <g id="Group_122" data-name="Group 122" transform="translate(-14 -24)">
+    <g id="back_btn" transform="translate(14 24)">
+      <g id="Ellipse_8" data-name="Ellipse 8" fill="#fff" stroke="#404642" stroke-width="1">
+        <circle cx="19" cy="19" r="19" stroke="none"/>
+        <circle cx="19" cy="19" r="18.5" fill="none"/>
+      </g>
+    </g>
+    <path id="user_icon" data-name="user icon" d="M670.927,1283.989V1282.6a4.042,4.042,0,0,0-4.27-3.755h-7.321a4.042,4.042,0,0,0-4.271,3.755v1.385H654V1282.6c0-2.589,2.4-4.695,5.34-4.695h7.321c2.944,0,5.339,2.106,5.339,4.695v1.385Zm-13.288-13.3c0-2.593,2.394-4.7,5.346-4.7s5.346,2.1,5.346,4.7-2.393,4.7-5.346,4.7S657.639,1273.278,657.639,1270.685Zm1.07,0a4.313,4.313,0,1,0,4.277-3.757A4.046,4.046,0,0,0,658.708,1270.685Z" transform="translate(-630 -1233)" fill="#404642" stroke="#404642" stroke-width="0.5"/>
+  </g>
+</svg>

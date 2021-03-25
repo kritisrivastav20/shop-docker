@@ -1,0 +1,93 @@
+.displaypic {
+    width: 170px;
+    height: 170px;
+       border-radius: 50% !important;
+       background-size: contain;
+       object-fit: cover;
+  }
+.camera{
+    position: absolute;
+  top: 82%;
+  left: 68%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 28px;
+  padding: 4px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50% !important;
+  box-shadow: 4px 10px 12px #DADADA;
+    }
+
+  ion-list, ion-col {
+    padding: 0;
+  }
+
+    .product{
+      object-fit: cover;
+      height: 150px;
+      width: 100%;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-bottom: 2px;
+      padding-top: 2px;
+  }
+  .container{
+      margin-top: 8px;
+      column-count: 3;
+      padding: 0px;
+      margin: 0px;
+      column-gap: 0px;
+      padding-left: 5px;
+      padding-right: 5px
+  }
+  .productcol{
+  width: 100%;
+  }
+
+  .product{
+    height: 150px;
+    width: 150px
+}
+// .filters{
+//     box-shadow: 0px 6px 12px #DADADA;
+//     position: absolute;
+//     top: 6.8%;
+//     right: 8%;
+//     width: 15%;
+//     height: 88px;
+//     background: #FFFFFF;
+//     border-bottom: 1px solid #DADADA;
+//    }
+//    .col{
+//     border: 0.5px solid #DADADA;
+//  }
+
+.over-image-options-div {
+    display: flex;
+    top: 5%;
+    position: absolute;
+    right: 5%;
+    padding: 8px;
+    border-radius: 50%;
+   width: 12px;
+   height: 12px
+}
+.productposts{
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+.over-image-likes-div {
+    display: flex;
+    top: 2%;
+    position: absolute;
+    left: 5%;
+   width: 16px;
+   height: 16px
+}

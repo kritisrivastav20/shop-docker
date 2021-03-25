@@ -1,0 +1,100 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+* {
+    font-family: ProductSans !important;
+}
+
+@font-face {
+    font-family: ProductSans;
+    src: url('./assets/font/Helvetica.ttf');
+}
+
+@font-face {
+    font-family: ProductSansBold;
+    src: url('./assets/font/helvetica-light-587ebe5a59211.ttf');
+}
+
+.no-padding-left-right-bottom {
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    padding-bottom: 0% !important;
+}
+.filter-modal {
+  ion-backdrop {
+    visibility: visible !important;
+  }
+  .modal-wrapper {
+position: absolute;
+    width: 100%;
+    height: 35%;
+    bottom: 10%;
+left: 0;
+right: 0;
+  }
+}
+.tour-modal {
+  ion-backdrop {
+    visibility: hidden !important;
+  }
+  --background: transparent !important;
+  .modal-wrapper
+{
+  background: rgba(0,0,0,0.3);
+  opacity: 1;
+  position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: 10%;
+left: 0;
+right: 0;
+}
+}
+.toast-btn {
+  background: #fff;
+  color: #343333;
+}
+
+.no-padding-left-right-top {
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    padding-top: 0% !important;
+}
+
+.modal-back-button {
+    font-size: 20px;
+}
+
+.modal-back-button-col {
+    align-self: center;
+    display: flex;
+}
+
+.field-header-label {
+    font-size: small;
+    color: #a2a2a2;
+}

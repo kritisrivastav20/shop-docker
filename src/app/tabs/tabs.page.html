@@ -1,0 +1,29 @@
+<ion-tabs (ionTabsDidChange)="setCurrentTab($event)">
+
+  <ion-tab-bar class="ion-no-border" slot="bottom" translucent="true" style="height: 50px">
+    <ion-tab-button tab="home-tab">
+      <ion-icon *ngIf = "selected === 'home-tab'"  class = "icons" name="home-outline" color = "secondary"></ion-icon>
+      <ion-icon *ngIf = "selected !== 'home-tab'" class = "icons" name="home-outline" color = "tertiary"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="search-tab">
+      <ion-icon *ngIf = "selected === 'search-tab'" class = "icons" name = "search-outline" color = "secondary"></ion-icon>
+      <ion-icon *ngIf = "selected !== 'search-tab'" class = "icons" name = "search-outline" color = "tertiary"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button [routerLink]="['/tabs/publish-tab']" [queryParams]="{cart: false}" tab="publish-tab">
+      <ion-icon name = "add-circle" color = "primary" id="publish"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="collections-tab">
+      <ion-icon *ngIf = "selected === 'collections-tab'" class = "icons" name = "heart" color = "secondary"></ion-icon>
+      <ion-icon *ngIf = "selected !== 'collections-tab'" class = "icons" name = "heart-outline" color = "tertiary"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="menu-tab">
+      <ion-icon *ngIf = "selected === 'menu-tab'" class = "icons" name = "person-circle-outline" color = "secondary"></ion-icon>
+      <ion-icon *ngIf = "selected !== 'menu-tab'" class = "icons" name = "person-circle-outline" color = "tertiary"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

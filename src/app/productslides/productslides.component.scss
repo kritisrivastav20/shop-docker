@@ -1,0 +1,19 @@
+#product{
+    object-fit: cover;
+    height: 130px
+}
+#buttons{
+    border-bottom: 1px solid #343333;
+       border-left: 1px solid #343333;
+       border-right: 1px solid #343333;
+       border-top: 1px solid #343333;
+       text-align: center;
+       color: #343333;
+       margin-bottom: 8px;
+}
+#close{
+    display: flex;
+    top: 5%;
+    position: absolute;
+    right: 5%;
+}
