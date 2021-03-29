@@ -28,10 +28,8 @@
       object-fit: cover;
       height: 150px;
       width: 100%;
-      padding-left: 4px;
-      padding-right: 4px;
-      padding-bottom: 2px;
-      padding-top: 2px;
+      padding-right: 2px;
+      padding-left: 2px;
   }
   .container{
       margin-top: 8px;
@@ -39,17 +37,11 @@
       padding: 0px;
       margin: 0px;
       column-gap: 0px;
-      padding-left: 5px;
-      padding-right: 5px
   }
   .productcol{
   width: 100%;
   }
 
-  .product{
-    height: 150px;
-    width: 150px
-}
 // .filters{
 //     box-shadow: 0px 6px 12px #DADADA;
 //     position: absolute;

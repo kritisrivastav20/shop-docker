@@ -21,9 +21,13 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(() => {
       if (this.platform.is('android')) {
-        this.statusBar.styleBlackOpaque();
+        this.statusBar.styleLightContent();
+        this.statusBar.overlaysWebView(false);
+        this.statusBar.backgroundColorByHexString('#fff');
       } else {
         this.statusBar.styleDefault();
+        this.statusBar.overlaysWebView(false);
+        this.statusBar.backgroundColorByHexString('#fff');
       }
       this.splashScreen.hide();
     });

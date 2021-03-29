@@ -7,7 +7,7 @@
         </ion-button>
       </ion-col>
       <ion-col align="center" style="padding-top: 8px">
-        <img src="assets/icon/Shopify.svg" style="width: 40%" alt="" />
+        <img src="assets/icon/Shopify.svg" style="height: 32px; width: 40%" alt="" />
       </ion-col>
       <ion-col [routerLink]="['/tabs/publish-tab']" [queryParams]="{cart: true}" size="2.5" style="padding-right: 16px; padding-bottom: 4px;">
         <ion-button fill="clear" id="button" shape="round">
@@ -19,8 +19,7 @@
 </ion-header>
 
 <ion-content [scrollEvents]="true" (ionScroll)="adjustElementOnScroll($event)">
-  <ion-virtual-scroll [items]="posts">
-    <div *virtualItem="let post; let i = index">
+    <div *ngFor="let post of posts; let i = index">
       <ion-item lines="none">
         <ion-avatar slot="start" class="profile-avatar">
           <ion-img [src]="post.profileImg"></ion-img>
@@ -36,7 +35,7 @@
           (click)="post.isFollow=!post.isFollow">
           Following
         </ion-button>
-        <ion-icon (click) = "presentToastWithOptions(post)" src="assets/icon/options.svg"></ion-icon>
+        <ion-icon (click) = "presentToastWithOptions(post)" src="assets/icon/options.svg" class="three-dots"></ion-icon>
       </ion-item>
       <ion-row>
         <ion-col size="12" class="no-padding-left-right-bottom">
@@ -46,7 +45,7 @@
             <ion-icon *ngIf = "save" src="assets/icon/favblack.svg"></ion-icon>
           </div>
           <div (click)="OpenProducts(i)" class="over-image-options-product">
-              <ion-icon name = "basket" color = "primary" style = "padding-right: 5px; font-size: 16px">
+              <ion-icon name = "basket" color = "primary" style = "padding-right: 5px; font-size: 15px">
               </ion-icon> 5 Products
             </div>
         </ion-col>
@@ -79,19 +78,18 @@
         </ion-col>
         <ion-col size="12" style="padding-top: 0%; padding-left: 16px;padding-right: 24px;">
           <p align='justify' class="post-desc">
-            <strong style="padding-right: 16px; font-size: 18px"> {{getShortName(post.name)}}</strong>
+            <strong style="padding-right: 16px; font-size: 15px"> {{getShortName(post.name)}}</strong>
             {{ post.description }}
           </p>
           <ion-label *ngFor="let tag of post.tags" color="medium" class="tag-label">
             <span class="tag-hash">#</span>{{ tag }}
           </ion-label>
         </ion-col>
-        <ion-col size="12" style="padding-top: 0%; padding-bottom: 16px;">
+        <ion-col size="12" style="padding-top: 0%">
           <span style="float: right; margin-right: 20px">
             <ion-icon src="assets/icon/viewmore.svg" style="vertical-align: middle" id="view"></ion-icon>
           </span>
         </ion-col>
       </ion-row>
     </div>
-  </ion-virtual-scroll>
 </ion-content>

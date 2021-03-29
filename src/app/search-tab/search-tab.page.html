@@ -5,10 +5,10 @@
             <ion-icon name="arrow-back-outline" color = "primary" style="font-size: 22px"></ion-icon>
         </ion-col>
       <ion-col align="start" style="padding-top: 8px; padding-left: 24px;">
-        <img src="assets/icon/explore.svg" style="height: 40px" alt="" />
+        <img src="assets/icon/explore.svg" style="height: 32px" alt="" />
       </ion-col>
       <ion-col [routerLink]="['/tabs/publish-tab']" [queryParams]="{cart: true}" size="2.5" style="padding-right: 16px; padding-bottom: 4px;">
-        <ion-button fill="clear" id="button" shape="round">
+        <ion-button fill="clear" id="button" shape="round" align = "start">
           <ion-icon name = "cart" slot="icon-only" color="secondary" id="icon"></ion-icon>
         </ion-button>
       </ion-col>
@@ -83,18 +83,18 @@
       <ion-row>
             <ion-col>
               <ion-col>
-                <img src={{post.images[0]}} class = "product"/>
+                <img src={{post.images[0]}} class = "product" style="padding-right: 4px;"/>
               </ion-col>
               <ion-col >
-                  <img src={{post.images[1]}} class = "product" style="padding-top: 5px;"/>
+                  <img src={{post.images[1]}} class = "product" style="padding-right: 4px;"/>
                 </ion-col>
           </ion-col> <br>
-          <ion-col style="margin-right: 6px" align = "start">
+          <ion-col align = "start">
               <ion-col>
                 <img src={{post.images[2]}} class = "product"/>
               </ion-col>
               <ion-col>
-                  <img src={{post.images[3]}} class = "product" style="padding-top: 4px;"/>
+                  <img src={{post.images[3]}} class = "product"/>
                 </ion-col>
           </ion-col>
         </ion-row>
@@ -120,14 +120,14 @@
       </ion-list>
   
       <ion-list *ngSwitchCase="'Products'" id = "list">
-        <ion-item *ngFor="let image of images; let i = index" lines = "none">
+        <ion-row *ngFor="let image of images; let i = index" lines = "none">
               <ion-col class = "productcol">
-                <img src={{image.product[0]}} class = "product"/>
+                <img src={{image.product[0]}} class = "product" style="padding-right: 4px;"/>
               </ion-col>
-              <ion-col clasee = "productcol">
+              <ion-col class = "productcol">
                   <img src={{image.product[1]}} class = "product"/>
                 </ion-col>
-        </ion-item>
+        </ion-row>
       </ion-list>
   
        <ion-list *ngSwitchCase="'Hashtags'" id = "list">

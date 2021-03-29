@@ -37,42 +37,39 @@
     bottom: 5%;
     position: absolute;
     left: 5%;
-    padding: 8px;
+    padding: 3px 4px;
     border-radius: 20px !important;
-    font-size: 15px;
+    font-size: 13px;
     color: #343333;
-    border-bottom: 1px solid #343333;
-    border-left: 1px solid #343333;
-    border-right: 1px solid #343333;
-    border-top: 1px solid #343333;
+    border: 1px solid #343333;
 }
 
 .post-footer-option-icon {
-    width: 28px;
-    height: 25px;
-    padding-right: 16px;
+    width: 20px;
+    height: 22px;
+    padding-right: 8px;
 }
 
 .post-footer-option-label {
     vertical-align: super;
-    font-size: 16px;
+    font-size: 15px;
     color: #343333;
 }
 
 .post-desc {
-    font-size: 17px;
+    font-size: 15px;
     color: #343333;
     margin-top: 0%;
     margin-bottom: 0%;
 }
 
 .tag-label {
-    font-size: 17px;
+    font-size: 15px;
     padding-right: 5px;
 }
 
 .tag-hash {
-    font-size: 17px;
+    font-size: 15px;
     padding-right: 2px;
     padding-top: 4px;
 }
@@ -99,19 +96,18 @@
 }
 
 #icon{
-    width: 26px;
-    height: 26px;
-}
-
-#icon {
-    width: 33px;
-    height: 33px;
-
+    width: 22px;
+    height: 22px;
 }
 
 #button {
     border-radius: 50%;
     border: 1px;
+}
+
+.three-dots {
+    width: 22px;
+    height: 18px;
 }
 
 #following {

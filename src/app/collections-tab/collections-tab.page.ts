@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { data } from '../data.constant';
+import { ToastController, ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-collections-tab',
@@ -113,8 +115,39 @@ export class CollectionsTabPage {
       posts: "$ 89"
     }
   ];
-  constructor() {
+  constructor(private toastController: ToastController,
+    private aController: ActionSheetController) {
     this.selector = "Products";
   }
+
+  async bagit(item) {
+    data.items.push({
+      image: item.postImg,
+      item: item.tag,
+      quantity: 1
+    })
+
+      const toast = await this.toastController.create({
+        message: 'Item added successfully!',
+        position: 'top',
+        duration: 2000
+      });
+      toast.present();
+    }
+    async presentToastWithOptions(item) {
+      const actionSheet = await this.aController.create({
+        header: 'Options',
+        cssClass: 'my-custom-class',
+        buttons: [ {
+          text: 'Add to Bag',
+          icon: 'cart',
+          role: 'destructive',
+          handler: () => {
+            this.bagit(item);
+          }
+        }]
+      });
+      await actionSheet.present();
+    }
 
 }

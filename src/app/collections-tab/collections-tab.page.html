@@ -30,7 +30,7 @@
         </ion-label>
        
         <!-- <ion-button shape="round" slot="end" fill = "clear" color = "success">View all</ion-button> -->
-        <ion-icon slot="end" src="assets/icon/options.svg"></ion-icon>
+        <ion-icon slot="end" src="assets/icon/options.svg" class = "three-dots"></ion-icon>
         </ion-item>
         <ion-slides class="image-slider" loop="true" [options]="sliderConfig">
             <ion-slide *ngFor="let image of images" >
@@ -54,7 +54,7 @@
                   </ion-label>
                  
                   <!-- <ion-button shape="round" slot="end" fill = "clear" color = "success">View all</ion-button> -->
-                  <ion-icon slot="end" src="assets/icon/options.svg"></ion-icon>
+                  <ion-icon slot="end" src="assets/icon/options.svg" class = "three-dots"></ion-icon>
                   </ion-item>
                   <ion-slides class="image-slider" loop="true" [options]="sliderConfig">
                       <ion-slide *ngFor="let post of posts" >
@@ -65,7 +65,7 @@
                           <ion-col  style="margin-top: 8px; align-content: flex-start;">
                          <a style="font-size: 16px; color: #343333">{{post.tag}}</a> <br>
                          <a style="font-size: 14px; color: #848484">{{post.posts}}
-                          <ion-icon src="assets/icon/dots.svg" style="padding-left: 4px; margin-top: 5px"></ion-icon></a>
+                          <ion-icon (click) = "presentToastWithOptions(post)" src="assets/icon/dots.svg" style="padding-left: 4px; margin-top: 5px"></ion-icon></a>
                             </ion-col>
                       </ion-col>
                       </ion-slide>
@@ -78,7 +78,7 @@
                             </ion-label>
                            
                             <!-- <ion-button shape="round" slot="end" fill = "clear" color = "success">View all</ion-button> -->
-                            <ion-icon slot="end" src="assets/icon/options.svg"></ion-icon>
+                            <ion-icon slot="end" src="assets/icon/options.svg" class = "three-dots"></ion-icon>
                             </ion-item>
                             <ion-slides class="image-slider" loop="true" [options]="sliderConfig">
                                 <ion-slide *ngFor="let image of images" >

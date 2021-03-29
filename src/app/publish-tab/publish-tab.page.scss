@@ -3,7 +3,6 @@
     background-color: #343333;
     border: dashed;
     border-width: 1.5px;
-    border-radius: 5px;
     border-color: #343333;
 }
 
@@ -105,7 +104,7 @@ section {
 .plus {
     position: absolute;
     right: 40px;
-    bottom: 18px;
+    bottom: 22px;
 }
 .quantity {
     position: absolute;
@@ -113,7 +112,7 @@ section {
     bottom: 31px;
 }
 #grid {
-    padding: 16px 0px;
+    padding: 8px 0px;
     border-bottom: 1px solid #dadada;
     margin: 0px 24px;
 }
