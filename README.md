@@ -1,4 +1,4 @@
-# shopify
+# shop docker app
 
 Social media - Instagram clone app.
 
