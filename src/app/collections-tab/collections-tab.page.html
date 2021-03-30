@@ -1,8 +1,8 @@
 <ion-header color = "light"  class="ion-no-border"  lines = "none">
   <ion-toolbar color = "light">
     <ion-row style="padding-top: 16px; width: 100%" color = "light" >
-      <ion-col align = "start" style="padding-top: 8px; padding-left: 16px;">
-        <img src="assets/icon/Favorites.svg" style="width: 40%; height: 32px;" alt=""/>
+      <ion-col align = "start" style="padding-left: 16px;">
+        <img src="assets/icon/Favorites.svg" style="width: 40%;" alt=""/>
       </ion-col>
       <ion-col [routerLink]="['/tabs/publish-tab']" [queryParams]="{cart: true}" size="2.5" style="padding-right: 16px; padding-bottom: 4px;">
         <ion-button fill="clear" id="button" shape="round">
@@ -36,7 +36,7 @@
             <ion-slide *ngFor="let image of images" >
               <ion-col>
                 <ion-col  style="margin-top: 8px">
-                  <img src="{{image.product}}" style="object-fit: cover" class = "product"/>
+                  <img src="{{image.postImg}}" style="object-fit: cover" class = "product"/>
                 </ion-col>
                 <ion-col  style="margin-top: 8px; align-content: flex-start;">
                <a style="font-size: 16px; color: #343333">{{image.tag}}</a> <br>
@@ -84,12 +84,12 @@
                                 <ion-slide *ngFor="let image of images" >
                                   <ion-col>
                                     <ion-col  style="margin-top: 8px">
-                                      <img src="{{image.product}}" style="object-fit: cover" class = "product"/>
+                                      <img src="{{image.postImg}}" style="object-fit: cover" class = "product"/>
                                     </ion-col>
                                     <ion-col  style="margin-top: 8px; align-content: flex-start;">
                                    <a style="font-size: 16px; color: #343333">{{image.tag}}</a> <br>
                                    <a style="font-size: 14px; color: #848484">{{image.posts}}
-                                    <ion-icon (click) = "presentToastWithOptions(post)" src="assets/icon/dots.svg" style="padding-left: 4px; margin-top: 5px"></ion-icon></a>
+                                    <ion-icon (click) = "presentToastWithOptions(image)" src="assets/icon/dots.svg" style="padding-left: 4px; margin-top: 5px"></ion-icon></a>
                                       </ion-col>
                                 </ion-col>
                                 </ion-slide>
@@ -103,7 +103,7 @@
                               
                             <div class = "container" *ngSwitchCase="'Current'">
                               <div class = "productcol" *ngFor="let image of images; let i = index" >
-                                <img src={{image.product}} class = "productposts"/>
+                                <img src={{image.postImg}} class = "productposts"/>
                                 <ion-icon src="assets/icon/liked.svg" class="over-image-likes-div"
                                 ></ion-icon>
                               </div>

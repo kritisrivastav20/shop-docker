@@ -17,42 +17,42 @@ export class CollectionsTabPage {
   };
   public images = [
     {
-      product: "assets/images/bb.jpg",
+      postImg: "assets/images/bb.jpg",
       tag: "Product 1",
       posts: "$ 89"
     },
     {
-      product: "assets/images/aa.jpg",
+      postImg: "assets/images/aa.jpg",
       tag: "Product 2",
       posts: "$ 20"
     },
     {
-      product: "assets/images/bb.jpg",
+      postImg: "assets/images/bb.jpg",
       tag: "Product 3",
       posts: "$ 20"
     },
     {
-      product: "assets/images/ee.jpg",
+      postImg: "assets/images/ee.jpg",
       tag: "Product 4",
       posts: "$ 46"
     },
     {
-      product: "assets/images/aa.jpg",
+      postImg: "assets/images/aa.jpg",
       tag: "Product 5",
       posts: "$ 54"
     },
     {
-      product: "assets/images/cc.jpg",
+      postImg: "assets/images/cc.jpg",
       tag: "Product 6",
       posts: "$ 29"
     },
     {
-      product: "assets/images/ff.jpg",
+      postImg: "assets/images/ff.jpg",
       tag: "Product 7",
       posts: "$ 35"
     },
     {
-      product: "assets/images/dd.jpg",
+      postImg: "assets/images/dd.jpg",
       tag: "Product 8",
       posts: "$ 15"
     },

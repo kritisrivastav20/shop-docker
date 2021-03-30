@@ -2,7 +2,7 @@
   <ion-toolbar color = "light">
     <ion-row style="width: 100%" color = "light" >
       <ion-col align = "start" style="padding-top: 16px; padding-left: 32px">
-        <img src="assets/icon/Profile.svg" style="height: 32px" alt="" />      
+        <img src="assets/icon/Profile.svg" alt="" />      
       </ion-col>
     </ion-row>
   </ion-toolbar>
@@ -63,7 +63,7 @@
   
        <div *ngSwitchCase="'Collection'" id = "list">
          
-        <ion-slides class="image-slider" loop="true" [options]="sliderConfig">
+        <ion-slides class="image-slider" loop="true" [options]="sliderConfig" pager>
           <ion-slide *ngFor="let item of products" >
             <ion-col>
               <ion-col  style="margin-top: 8px">

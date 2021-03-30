@@ -1,6 +1,6 @@
 
 <ion-content style="background: transparent" id = "productspage">
-  <ion-slides class="image-slider" loop="true" slidesPerView="5">
+  <ion-slides class="image-slider" loop="true" slidesPerView="5" pager>
     <ion-slide *ngFor="let image of images" attr.data-index={{i}}  style="width: 100%">
       <ion-row style="padding-left: 8px; padding-right: 8px" id = "grid">
         <ion-col size = "5" style="margin-top: 8px">

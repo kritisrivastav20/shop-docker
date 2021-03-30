@@ -4,10 +4,10 @@
         <ion-col size = "1" *ngIf = "viewsearches == true" (click) = "hideSearch()" style="padding: 16px">
             <ion-icon name="arrow-back-outline" color = "primary" style="font-size: 22px"></ion-icon>
         </ion-col>
-      <ion-col align="start" style="padding-top: 8px; padding-left: 24px;">
-        <img src="assets/icon/explore.svg" style="height: 32px" alt="" />
+      <ion-col align="start" style="padding-left: 24px;">
+        <img src="assets/icon/explore.svg" alt="" />
       </ion-col>
-      <ion-col [routerLink]="['/tabs/publish-tab']" [queryParams]="{cart: true}" size="2.5" style="padding-right: 16px; padding-bottom: 4px;">
+      <ion-col [routerLink]="['/tabs/publish-tab']" [queryParams]="{cart: true}" size="2.5" style="padding-right: 16px">
         <ion-button fill="clear" id="button" shape="round" align = "start">
           <ion-icon name = "cart" slot="end" color="tertiary" id="icon"></ion-icon>
         </ion-button>

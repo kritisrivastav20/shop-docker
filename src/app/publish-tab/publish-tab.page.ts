@@ -51,7 +51,9 @@ export class PublishTabPage {
     } else if (type === 'minus' && value > 1) {
       value -= 1;
     } else {
-      value = 1;
+      value = 0;
+      this.cart.items.splice(id, 1);
+      return;
     }
     this.cart.items[id].quantity = value;
   }
@@ -86,22 +88,5 @@ export class PublishTabPage {
     }).catch((err) => {
       console.log('hasReadPermission err: ', err);
     });
-  }
-
-  async goToPublishPage() {
-    // if (this.isPostImageUploaded && this.captionInputValue !== '' && this.hashTags.length !== 0) {
-    const modal = await this.modlaCtrl.create({
-      component: PublishPostPage,
-      componentProps: {
-        postImageValue: this.postImageBase64Value,
-        postDescription: this.captionInputValue,
-        postHashTags: this.hashTags
-      },
-      backdropDismiss: false,
-      animated: true,
-    });
-    await modal.present();
-    const modalResponse = await modal.onDidDismiss();
-    // }
   }
 }

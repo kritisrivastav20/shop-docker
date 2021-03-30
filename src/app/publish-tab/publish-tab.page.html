@@ -53,7 +53,7 @@
         <!-- <ion-icon id = "close" src="assets/icon/close.svg" (click)="dismiss()"></ion-icon> -->
 </ion-row>
 </div>
-<ion-row id = "grid">
+<ion-row *ngIf = "cart.items.length > 0" id = "grid">
   <ion-col size = "5" style="margin-top: 8px">
     <a class = "prod-name" >Subtotal</a>
   </ion-col>
@@ -70,6 +70,6 @@
 class="break"
 expand="block" fill="solid"  class = "checkout" color = "secondary"
 >
-Check out
+{{cart.items.length > 0 ? 'Check out' : 'No items'}}
 </ion-button>
 </ion-content>
