@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="107" height="23" viewBox="0 0 107 23">
   <g id="Group_123" data-name="Group 123" transform="translate(-286 -678)">
-    <text id="View_more" data-name="View more" transform="translate(286 695)" fill="#343333" font-size="16" font-family="Helvetica" letter-spacing="0.01em"><tspan x="0" y="0">View more</tspan></text>
+    <text id="View_more" data-name="View more" transform="translate(286 695)" fill="#D4D4D4" font-size="15" font-family="Helvetica" letter-spacing="0.01em"><tspan x="0" y="0">View more</tspan></text>
     <g id="back_btn" transform="translate(371 678)">
-      <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="11" cy="11.5" rx="11" ry="11.5" fill="#d9dad9"/>
+      <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="11" cy="11.5" rx="11" ry="11.5" fill="#404642"/>
       <path id="Path_54" data-name="Path 54" d="M4.839,5.446a.481.481,0,0,0,0-.718L1.224.205A.385.385,0,0,0,.58.147L.186.5a.428.428,0,0,0-.036.679L3.354,5.1.15,8.9c-.215.252-.2.446.054.641L.6,9.853a.4.4,0,0,0,.662-.058Z" transform="translate(8.842 6.518)" fill="#fff"/>
     </g>
   </g>

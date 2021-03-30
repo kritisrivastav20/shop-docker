@@ -42,6 +42,8 @@
     font-size: 13px;
     color: #343333;
     border: 1px solid #343333;
+    vertical-align: middle;
+    align-items: center;
 }
 
 .post-footer-option-icon {
@@ -130,19 +132,13 @@
     width: 107px;
     height: 23px
 }
-#popup{
-    height: 280px; width: 100%; z-index: 10;
-    display: flex;
-    bottom: 0%;
-    position: absolute;
-}
+
 #popbutton{
-    text-align: center;
+    text-align: right;
     margin-right: 8px;
-    display: flex;
-    top: 51%;
-    right: 5%;
-    position: absolute;
-    background: #D9DAD9;
+    background: transparent;
     border-radius: 50%;
+    width: 100%;
+    margin-right: 24px;
+    margin-top: 8px;
 }

@@ -1,17 +1,17 @@
 <ion-header class="ion-no-border" color = "light" id = "header">
   <ion-toolbar color = "light">
-    <ion-row style="padding-top: 16px; width: 100%" color = "light" >
-      <ion-col size="2.5" align = "left">
+    <ion-row style="padding-top: 8px; width: 100%" color = "light" >
+      <ion-col align="start" style="padding-top: 8px">
+        <img src="assets/icon/Shopify.svg" style="height: 32px; width: 120px" alt="" />
+      </ion-col>
+      <ion-col size="1" align = "left">
         <ion-button fill="clear" shape="round" align = "start" [routerLink]="['/tabs/menu-tab']">
-          <ion-icon src="assets/icon/profileicon.svg" slot="icon-only" color = "tertiary" id = "icon"></ion-icon>
+          <ion-icon name = "person-circle-outline" slot="start" color = "tertiary" id = "icon"></ion-icon>
         </ion-button>
       </ion-col>
-      <ion-col align="center" style="padding-top: 8px">
-        <img src="assets/icon/Shopify.svg" style="height: 32px; width: 40%" alt="" />
-      </ion-col>
-      <ion-col [routerLink]="['/tabs/publish-tab']" [queryParams]="{cart: true}" size="2.5" style="padding-right: 16px; padding-bottom: 4px;">
+      <ion-col [routerLink]="['/tabs/publish-tab']" [queryParams]="{cart: true}" size="2" style="padding-right: 16px; padding-bottom: 4px;">
         <ion-button fill="clear" id="button" shape="round">
-          <ion-icon name = "cart" slot="icon-only" color="secondary" id="icon"></ion-icon>
+          <ion-icon name = "cart" slot="start" color="tertiary" id="icon"></ion-icon>
         </ion-button>
       </ion-col>
     </ion-row>
@@ -52,7 +52,7 @@
         <div id = "popbutton" *ngIf = "ShowProducts[i] == true" (click)="HideProducts(i)">
         <ion-icon src="assets/icon/close.svg" style="width: 20px; height: 20px"></ion-icon>
       </div>
-        <app-productslides *ngIf = "ShowProducts[i] == true" id = "popup" style="height: 260px; width: 100%; z-index: 10;margin-bottom: 16px;">
+        <app-productslides *ngIf = "ShowProducts[i] == true" id = "popup" style="height: 220px; width: 100%; z-index: 10">
         </app-productslides>
         <ion-col size="4" id = "actions" align = "start" style="padding-left: 16px">
           <ion-icon *ngIf="!post.isLiked" src="assets/icon/heart.svg" class="post-footer-option-icon"

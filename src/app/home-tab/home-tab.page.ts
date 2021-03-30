@@ -72,7 +72,7 @@ b: any;
     return fullName.split(' ').slice(0, -1).join(' ');
   }
   OpenProducts(i){
-  this.ShowProducts[i] = true;
+    (this.ShowProducts[i] === true) ? this.ShowProducts[i] = false : this.ShowProducts[i] = true;
   }
   HideProducts(i){
     this.ShowProducts[i] = false;
