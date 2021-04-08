@@ -7,5 +7,3 @@ Social media - Instagram clone app.
 2. Do npm install to install the node packages.
 
 3. Hit ng serve and run the application !
-
-<3
